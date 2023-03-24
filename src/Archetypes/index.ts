@@ -1,8 +1,8 @@
 import Archetype from './Archetype';
-// import Dwarf from './Dwarf';
+import Mage from './Mage';
 // import Elf from './Elf';
 // import Halfling from './Halfling';
 // import Orc from './Orc';
 
-// export { Dwarf, Elf, Halfling, Orc };
+export { Mage };
 export default Archetype;

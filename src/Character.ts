@@ -14,13 +14,15 @@ export default class Character implements IFighter {
   private _defense: number;
   private _dexterity: number;
   private _energy: IEnergy;
-  private name: string;
+  protected _level: number;
+  private _name: string;
 
   constructor(name: string) {
-    this.name = name;
+    this._name = name;
+    this._level = 1;
     this._dexterity = getRandomInt(1, 10);
-    this._race = new Elf(this.name, this._dexterity);
-    this._archetype = new Mage(this.name);
+    this._race = new Elf(this._name, this._dexterity);
+    this._archetype = new Mage(this._name);
     this._maxLifePoints = this._race.maxLifePoints / 2;
     this._lifePoints = this._race.maxLifePoints;
     this._strength = getRandomInt(1, 10);
@@ -37,6 +39,10 @@ export default class Character implements IFighter {
 
   get archetype(): Archetype {
     return this._archetype;
+  }
+
+  get maxLifePoints(): number {
+    return this._maxLifePoints;
   }
 
   get lifePoints(): number {
@@ -57,6 +63,10 @@ export default class Character implements IFighter {
 
   get energy(): IEnergy {
     return { ...this._energy };
+  }
+
+  get level(): number {
+    return this._level;
   }
 
   receiveDamage(attackPoints: number): number {
@@ -84,6 +94,6 @@ export default class Character implements IFighter {
     if (this._lifePoints > this._race.maxLifePoints) {
       this._lifePoints = this._race.maxLifePoints;
     }
-    // this._lifePoints = this._maxLifePoints;
+    this._level += 1;
   }
 }

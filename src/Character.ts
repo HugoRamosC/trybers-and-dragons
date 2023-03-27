@@ -24,7 +24,7 @@ export default class Character implements IFighter {
     this._race = new Elf(this._name, this._dexterity);
     this._archetype = new Mage(this._name);
     this._maxLifePoints = this._race.maxLifePoints / 2;
-    this._lifePoints = this._race.maxLifePoints;
+    this._lifePoints = this._maxLifePoints;
     this._strength = getRandomInt(1, 10);
     this._defense = getRandomInt(1, 10);
     this._energy = {
@@ -77,6 +77,7 @@ export default class Character implements IFighter {
       this._lifePoints -= 1;
     }
     if (this._lifePoints <= 0) this._lifePoints = -1;
+    
     return this._lifePoints;
   }
 
@@ -89,11 +90,12 @@ export default class Character implements IFighter {
     this._strength += getRandomInt(1, 10);
     this._dexterity += getRandomInt(1, 10);
     this._defense += getRandomInt(1, 10);
-    this._lifePoints += getRandomInt(1, 10);
+    // this._lifePoints += getRandomInt(1, 10);
     this._energy.amount = 10;
-    if (this._lifePoints > this._race.maxLifePoints) {
-      this._lifePoints = this._race.maxLifePoints;
+    if (this._maxLifePoints > this._race.maxLifePoints) {
+      this._maxLifePoints = this._race.maxLifePoints;
     }
+    this._lifePoints = this._race.maxLifePoints;
     this._level += 1;
   }
 }

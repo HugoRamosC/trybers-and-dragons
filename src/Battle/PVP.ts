@@ -11,7 +11,7 @@ export default class PVP extends Battle {
     // this._player1.level = player1.level || player1.strength;
     this._player2 = player2;
     // this._player2.level = player2.level || player2.strength;
-    this.fight();
+    // this.fight();
   }
 
   PVPAttack(first: Character | IFighter, second: Character | IFighter) {

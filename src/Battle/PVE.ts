@@ -13,18 +13,21 @@ export default class PVE extends Battle {
     super(fighter);
     this._fighter = fighter;
     this._monsters = monsters;
-    this.fight();
+    // this.fight();
   }
-}
 
-fight() {
-  const firstMonsterAlive = this._monsters.find((m) => m.lifePoints !== -1);
-  const anyMonsterAlive = this._monsters.some((m) => m.lifePoints !== -1);
-  const fighterAlive = this._fighter.lifePoints !== -1;
-  while (fighterAlive && anyMonsterAlive) {
-    this._fighter.attack(firstMonsterAlive);
-    this._monsters.forEach((m) => {
-      if (m.lifePoints !== -1) m.attack(this._fighter);
+  fight() {
+    // const firstMonsterAlive = this._monsters.find((m) => m.lifePoints !== -1);
+    // const anyMonsterAlive = this._monsters.some((m) => m.lifePoints !== -1);
+    const fighterAlive = this._fighter.lifePoints !== -1;
+    this._monsters.forEach((monster) => {
+      while (fighterAlive && monster.lifePoints !== -1) {
+        this._fighter.attack(monster);
+        this._monsters.forEach((m) => {
+          if (m.lifePoints !== -1) m.attack(this._fighter);
+        });
+      }
+      return super.fight();
     });
     return super.fight();
   }

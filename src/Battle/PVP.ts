@@ -8,10 +8,7 @@ export default class PVP extends Battle {
   constructor(player1: Character | IFighter, player2: Character | IFighter) {
     super(player1);
     this._player1 = player1;
-    // this._player1.level = player1.level || player1.strength;
     this._player2 = player2;
-    // this._player2.level = player2.level || player2.strength;
-    // this.fight();
   }
 
   PVPAttack(first: Character | IFighter, second: Character | IFighter) {
@@ -24,7 +21,6 @@ export default class PVP extends Battle {
 
   fight() {
     return (this._player1.level || 1) > (this._player2.level || 1)
-    // return this._player1.strength > this._player2.strength
       ? this.PVPAttack(this._player1, this._player2)
       : this.PVPAttack(this._player2, this._player1);
   }

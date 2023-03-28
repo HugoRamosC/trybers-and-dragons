@@ -87,15 +87,15 @@ export default class Character implements IFighter {
 
   levelUp(): void {
     this._maxLifePoints += getRandomInt(1, 10);
+    this._lifePoints += getRandomInt(1, 10);
+    if (this._lifePoints > this._race.maxLifePoints) {
+      this._maxLifePoints = this._race.maxLifePoints;
+      this._lifePoints = this._race.maxLifePoints;
+    }
     this._strength += getRandomInt(1, 10);
     this._dexterity += getRandomInt(1, 10);
     this._defense += getRandomInt(1, 10);
-    this._lifePoints += getRandomInt(1, 10);
     this._energy.amount = 10;
-    if (this._lifePoints > this._race.maxLifePoints) {
-      this._lifePoints = this._race.maxLifePoints;
-      // this._lifePoints = this._race.maxLifePoints;
-    }
     this._level += 1;
   }
 }

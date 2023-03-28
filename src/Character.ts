@@ -85,6 +85,10 @@ export default class Character implements IFighter {
     enemy.receiveDamage(this._strength);
   }
 
+  special(enemy: IFighter): void {
+    enemy.receiveDamage(this._strength + this._energy.amount);
+  }
+
   levelUp(): void {
     this._maxLifePoints += getRandomInt(1, 10);
     this._lifePoints += getRandomInt(1, 10);

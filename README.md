@@ -1,13 +1,39 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Projeto Trybers And Dragons
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+[MEUS COMMITS](https://github.com/HugoRamosC/trybers-and-dragons/commits)
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+## O foi desenvolvido?
+
+Uma aplicação seguindo os princípios da arquitetura SOLID e os princípios de POO em uma estrutura de jogos de interpretação de papéis, mais conhecidos como jogos RPG (Role Playing Game).
+
+## Alguns conteúdos utilizados:
+
+- Classes, construtor, atributos, atributos abstratos e métodos
+- Objetos
+- Abstração
+- Polimorfismo
+- Encapsulamento
+- Sobrescrita (Override)
+- Método de acesso
+- Herança
+- Type Union
+- Interface
+
+## Requisitos obrigatórios do Projeto
+
+- [x] 1. Crie a classe Race
+- [x] 2. Crie classes que herdam de Race
+- [x] 3. Crie a interface Energy
+- [x] 4. Crie a classe Archetype
+- [x] 5. Crie classes que herdam de Archetype
+- [x] 6. Crie a interface Fighter
+- [x] 7. Crie a classe Character
+- [x] 8. Crie a interface SimpleFighter
+- [x] 9. Crie a classe Monster
+- [x] 10. Crie a classe PVP
+
+## Requisitos Bônus
+
+- [x] 11. Criar a classe PVE
+- [x] 12. Crie a classe Dragon
+- [x] 13. Crie objetos no arquivo index

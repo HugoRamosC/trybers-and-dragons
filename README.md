@@ -2,7 +2,7 @@
 
 [MEUS COMMITS](https://github.com/HugoRamosC/trybers-and-dragons/commits)
 
-## O foi desenvolvido?
+## O que foi desenvolvido:
 
 Uma aplicação seguindo os princípios da arquitetura SOLID e os princípios de POO em uma estrutura de jogos de interpretação de papéis, mais conhecidos como jogos RPG (Role Playing Game).
 
